@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBCNN Wordle - Өдөр тутмын үг таах тоглоом</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="wordle.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <button class="back-btn" onclick="loadPage('homepage.html')">
+                <i class='bx bx-arrow-back' ></i>
+            </button>
+            <div class="logo">BBCNN</div>
+        </div>
+        <h1 class="title">Wordle</h1>
+        <div class="header-right">
+            <button class="icon-btn" onclick="showStats()">
+                <i class='bx bx-bar-chart-alt-2'></i>
+            </button>
+            <button class="icon-btn" onclick="showHelp()">
+                <i class='bx bx-help-circle'></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="instructions">
+            <h3>6 оролдлогоор үгийг таа</h3>
+            <p>Таамаглал бүр нь 5 үсэгтэй хүчинтэй үг байх ёстой. Илгээхийн тулд Enter товчийг дарна уу.</p>
+            <p>Таамаглал бүрийн дараа хавтангийн өнгө өөрчлөгдөж таны таамаглал үгтэй хэр ойр байсныг харуулна.</p>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+        <div class="keyboard" id="keyboard"></div>
+
+    </main>
+
+    <div class="message" id="message"></div>
+
+    <div class="modal" id="statsModal">
+        <div class="modal-content">
+            <h2 class="modal-title">Статистик</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number" id="gamesPlayed">0</span>
+                    <span class="stat-label">Тоглосон</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="winPercentage">0</span>
+                    <span class="stat-label">Ялалтын %</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="currentStreak">0</span>
+                    <span class="stat-label">Одоогийн цуврал</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="maxStreak">0</span>
+                    <span class="stat-label">Хамгийн урт цуврал</span>
+                </div>
+            </div>
+            <button class="close-btn" onclick="closeStats()">Хаах</button>
+            <button class="close-btn" onclick="restartGame()">Нахих</button>
+        </div>
+    </div>
+
+    <script src="wordle.js"></script>
+</body>
+</html>

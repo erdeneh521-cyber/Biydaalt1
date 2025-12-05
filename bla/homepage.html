@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="homepage.css">
+    <title>BBCNN Мэдээ</title>
+</head>
+<body>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <nav>
+        <div class="nav-top">
+            <div class="logo">
+                <span style="cursor:pointer;" onclick="loadPage('homepage.html')">BBCNN</span>
+            </div>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="#">
+                        Дэлхий
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-title">Дэлхийн мэдээ</div>
+                        <div class="dropdown-grid">
+                            <a href="#" class="dropdown-item">Африк</a>
+                            <a href="#" class="dropdown-item">Америк</a>
+                            <a href="#" class="dropdown-item">Ази Номхон далай</a>
+                            <a href="#" class="dropdown-item">Хятад</a>
+                            <a href="#" class="dropdown-item">Европ</a>
+                            <a href="#" class="dropdown-item">Энэтхэг</a>
+                            <a href="#" class="dropdown-item">Ойрхи Дорнод</a>
+                            <a href="#" class="dropdown-item">Их Британи</a>
+                            <a href="#" class="dropdown-item">АНУ</a>
+                            <a href="#" class="dropdown-item">Япон</a>
+                            <a href="#" class="dropdown-item">Украйны хямрал</a>
+                            <a href="#" class="dropdown-item">Дайн ба мөргөлдөөн</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">
+                        Бизнес
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-title">Бизнесийн мэдээ</div>
+                        <div class="dropdown-grid">
+                            <a href="#" class="dropdown-item">Нисэх хөлөг ба батлан хамгаалах</a>
+                            <a href="#" class="dropdown-item">Автомашин ба тээвэр</a>
+                            <a href="#" class="dropdown-item">Эрчим хүч</a>
+                            <a href="#" class="dropdown-item">Байгаль орчин</a>
+                            <a href="#" class="dropdown-item">Санхүү</a>
+                            <a href="#" class="dropdown-item">Эрүүл мэнд ба эм</a>
+                            <a href="#" class="dropdown-item">Медиа ба харилцаа холбоо</a>
+                            <a href="#" class="dropdown-item">Жижиглэн худалдаа ба хэрэглэгч</a>
+                            <a href="#" class="dropdown-item">Тогтвортой бизнес</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">
+                        Зах зээл
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-title">Зах зээлийн мэдээ</div>
+                        <div class="dropdown-grid">
+                            <a href="#" class="dropdown-item">Түүхий эд</a>
+                            <a href="#" class="dropdown-item">Валют</a>
+                            <a href="#" class="dropdown-item">Хэлцэл</a>
+                            <a href="#" class="dropdown-item">Хөгжиж буй зах зээл</a>
+                            <a href="#" class="dropdown-item">Хувьцаа</a>
+                            <a href="#" class="dropdown-item">Сан</a>
+                            <a href="#" class="dropdown-item">Дэлхийн зах зээл</a>
+                            <a href="#" class="dropdown-item">Хүү ба бонд</a>
+                            <a href="#" class="dropdown-item">Баялаг</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">
+                        Технологи
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-title">Технологийн мэдээ</div>
+                        <div class="dropdown-grid">
+                            <a href="#" class="dropdown-item">Хиймэл оюун ухаан</a>
+                            <a href="#" class="dropdown-item">Кибер аюулгүй байдал</a>
+                            <a href="#" class="dropdown-item">Эвдэрсэн</a>
+                            <a href="#" class="dropdown-item">Эрүүл мэндийн ирээдүү</a>
+                            <a href="#" class="dropdown-item">Мөнгөний ирээдүү</a>
+                            <a href="#" class="dropdown-item">Сансар</a>
+                            <a href="#" class="dropdown-item">Технологи ба шинэчлэл</a>
+                            <a href="#" class="dropdown-item">Тээвэр</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">
+                        Спорт
+                    <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-title">Спортийн мэдээ</div>
+                        <div class="dropdown-grid">
+                            <a href="#" class="dropdown-item">Хиймэл оюун ухаан</a>
+                            <a href="#" class="dropdown-item">Кибер аюулгүй байдал</a>
+                            <a href="#" class="dropdown-item">Эвдэрсэн</a>
+                            <a href="#" class="dropdown-item">Эрүүл мэндийн ирээдүү</a>
+                            <a href="#" class="dropdown-item">Мөнгөний ирээдүү</a>
+                            <a href="#" class="dropdown-item">Сансар</a>
+                            <a href="#" class="dropdown-item">Технологи ба шинэчлэл</a>
+                            <a href="#" class="dropdown-item">Тээвэр</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#video-news">
+                        Видео
+                    <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-title">Видео мэдээ</div>
+                        <div class="dropdown-grid">
+                            <a href="#" class="dropdown-item">Хиймэл оюун ухаан</a>
+                            <a href="#" class="dropdown-item">Кибер аюулгүй байдал</a>
+                            <a href="#" class="dropdown-item">Эвдэрсэн</a>
+                            <a href="#" class="dropdown-item">Эрүүл мэндийн ирээдүү</a>
+                            <a href="#" class="dropdown-item">Мөнгөний ирээдүү</a>
+                            <a href="#" class="dropdown-item">Сансар</a>
+                            <a href="#" class="dropdown-item">Технологи ба шинэчлэл</a>
+                            <a href="#" class="dropdown-item">Тээвэр</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#games">
+                        Тоглоом
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-title">Тоглоомын мэдээ</div>
+                        <div class="dropdown-grid">
+                            <a href="#" class="dropdown-item">Хиймэл оюун ухаан</a>
+                            <a href="#" class="dropdown-item">Кибер аюулгүй байдал</a>
+                            <a href="#" class="dropdown-item">Эвдэрсэн</a>
+                            <a href="#" class="dropdown-item">Эрүүл мэндийн ирээдүү</a>
+                            <a href="#" class="dropdown-item">Мөнгөний ирээдүү</a>
+                            <a href="#" class="dropdown-item">Сансар</a>
+                            <a href="#" class="dropdown-item">Технологи ба шинэчлэл</a>
+                            <a href="#" class="dropdown-item">Тээвэр</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-buttons">
+                <a href="#"><i class='bx bx-search'></i></a>
+                <a href="#" class="btn-signin">Нэвтрэх</a>
+                <a href="#" class="btn-register">Бүртгүүлэх</a>
+            </div>
+        </div>
+
+        <div class="exchange-ticker">
+            <div class="ticker-wrapper" id="ticker">
+                <div class="ticker-item">
+                    <span class="ticker-label">Ачааллаж байна...</span>
+                    <span class="ticker-value">Валютын ханш</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main-content">
+        <div class="hero-section">
+            <div class="main-story">
+                <img src="#" alt="Гол мэдээ">
+                <div class="main-story-content">
+                    <span class="main-story-category">Технологи</span>
+                    <h2>Хиймэл оюун ухаан дэлхийн технологийн орчинг өөрчилж байна</h2>
+                    <p>Томоохон технологийн компаниуд дэлхий даяар салбаруудыг өөрчлөх шинэ хиймэл оюун ухааны системүүдийг танилцуулж, сонирхол болон зохицуулалтын санаа зовнилыг бий болгож байна.</p>
+                </div>
+            </div>
+
+            <div class="side-stories">
+                <div class="latest-header">Сүүлийн үеийн мэдээ</div>
+                
+                <div class="side-story">
+                    <img src="#" alt="Бизнесийн мэдээ">
+                    <div class="side-story-content">
+                        <h3>Хөрөнгийн зах зээл хүчтэй орлогын тайлангийн дунд дээд амжилтад хүрэв</h3>
+                        <div class="side-story-time">2 цагийн өмнө</div>
+                    </div>
+                </div>
+
+                <div class="side-story">
+                    <img src="#" alt="Шинжлэх ухаан">
+                    <div class="side-story-content">
+                        <h3>НАСА 2026 онд Ангараг судлах шинэ экспедицийг зарлав</h3>
+                        <div class="side-story-time">4 цагийн өмнө</div>
+                    </div>
+                </div>
+
+                <div class="side-story">
+                    <img src="#" alt="Байгаль орчин">
+                    <div class="side-story-content">
+                        <h3>Сэргээгдэх эрчим хүчний хөрөнгө оруулалт түүхэн дээд хэмжээнд хүрэв</h3>
+                        <div class="side-story-time">6 цагийн өмнө</div>
+                    </div>
+                </div>
+
+                <div class="side-story">
+                    <img src="#" alt="Спорт">
+                    <div class="side-story-content">
+                        <h3>Аварга шалгаруулах тэмцээний финал дээд амжилттай үзэгчдийг татав</h3>
+                        <div class="side-story-time">8 цагийн өмнө</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>Сүүлийн үеийн мэдээ</h2>
+        </div>
+
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="#" alt="Эрүүл мэнд">
+                <div class="news-card-category">Эрүүл мэнд</div>
+                <h3>Хорт хавдрын судалгаанд шинэ эмчилгээ найдвар төрүүлж байна</h3>
+                <p>Шинэ анагаах ухааны судалгаа хорт хавдрын түрэмгий хэлбэрийг эмчлэх шинэлэг арга замыг илчилэв.</p>
+                <div class="news-card-time">3 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Эдийн засаг">
+                <div class="news-card-category">Эдийн засаг</div>
+                <h3>Төв банкууд мөнгөний бодлогын өөрчлөлтийн дохио өгөв</h3>
+                <p>Томоохон санхүүгийн байгууллагууд өөрчлөгдөж буй эдийн засгийн нөхцөл байдлын дунд хүүгийн стратегиа тохируулж байна.</p>
+                <div class="news-card-time">5 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Инноваци">
+                <div class="news-card-category">Инноваци</div>
+                <h3>Судалгааны баг квант тооцооллын чухал ахиц гаргав</h3>
+                <p>Эрдэмтэд практик хэрэглээнд квант давуу талыг амжилттай харуулав.</p>
+                <div class="news-card-time">7 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Соёл">
+                <div class="news-card-category">Соёл</div>
+                <h3>Олон улсын кино наадам олон янзын киног тэмдэглэв</h3>
+                <p>Шагналын ёслол дэлхий даяар шинэ найруулагчдын шинэлэг кинонуудыг онцоллоо.</p>
+                <div class="news-card-time">9 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Боловсрол">
+                <div class="news-card-category">Боловсрол</div>
+                <h3>Дижитал сургалтын хувьсгал ангийн өрөөг өөрчилж байна</h3>
+                <p>Дэлхийн сургуулиуд оюутны оролцоо, сургалтыг сайжруулахын тулд шинэ технологи нэвтрүүлж байна.</p>
+                <div class="news-card-time">10 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Зах зээл">
+                <div class="news-card-category">Зах зээл</div>
+                <h3>Криптовалютын зах зээл томоохон институцийн нэвтрүүлэлтийг харж байна</h3>
+                <p>Тэргүүлэх санхүүгийн пүүсүүд дижитал хөрөнгийн санал өргөтгөх төлөвлөгөө зарлав.</p>
+                <div class="news-card-time">12 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Аялал">
+                <div class="news-card-category">Аялал</div>
+                <h3>Аялал жуулчлалын салбар дэлхий даяар хүчтэй сэргэлтийг мэдээлэв</h3>
+                <p>Олон улсын аялал жуулчлал дэлхий даяар хязгаарлалт суллагдсанаар цар тахлын өмнөх түвшинд хүрэв.</p>
+                <div class="news-card-time">14 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Дизайн">
+                <div class="news-card-category">Дизайн</div>
+                <h3>Тогтвортой архитектур салбарын томоохон шагналыг хүртэв</h3>
+                <p>Байгаль орчинд ээлтэй шинэлэг барилгын загвар байгаль орчинд үзүүлэх нөлөөгөөр хүлээн зөвшөөрөгдөв.</p>
+                <div class="news-card-time">16 цагийн өмнө</div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>Технологи</h2>
+        </div>
+
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="#" alt="Хиймэл оюун ухаан">
+                <div class="news-card-category">Хиймэл оюун ухаан</div>
+                <h3>OpenAI хувьсгалт хэлний загварыг гаргав</h3>
+                <p>Шинэ хиймэл оюун ухааны систем үл мэдэгдэж байсан ухаан бодох, асуудал шийдвэрлэх чадварыг харуулав.</p>
+                <div class="news-card-time">1 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Кибер аюулгүй байдал">
+                <div class="news-card-category">Кибер аюулгүй байдал</div>
+                <h3>Алдартай програм хангамжид томоохон аюулгүй байдлын сул тал илрүүлэгдэв</h3>
+                <p>Судлаачид дэлхий даяар олон сая хэрэглэгчдэд нөлөөлөх чухал алдааг тодорхойлов.</p>
+                <div class="news-card-time">3 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Сансрын технологи">
+                <div class="news-card-category">Сансрын технологи</div>
+                <h3>Хувийн сансрын компани тойрог замын үйлдвэрлэлд амжилт гаргав</h3>
+                <p>Хүндийн гүйдэлгүй үйлдвэрлэлийн салбарт шинэ боломжуудыг нээсэн дэвшил.</p>
+                <div class="news-card-time">5 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Блокчэйн">
+                <div class="news-card-category">Блокчэйн</div>
+                <h3>Төв банкны дижитал валют дэлхий даяар хүчээ авч байна</h3>
+                <p>Олон улс үндэсний дижитал валютын хэрэгжүүлэлтийн төлөвлөгөө зарлав.</p>
+                <div class="news-card-time">7 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Виртуал бодит байдал">
+                <div class="news-card-category">Виртуал бодит байдал</div>
+                <h3>VR технологи анагаах ухааны сургалтыг өөрчилж байна</h3>
+                <p>Бодит мэт симуляци эрүүл мэндийн мэргэжилтнүүдэд бодит дадлагын орчин бүрдүүлж байна.</p>
+                <div class="news-card-time">9 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Робот">
+                <div class="news-card-category">Робот</div>
+                <h3>Хүн шиг роботууд арилжааны ажлын байранд орж байна</h3>
+                <p>Дэвшилтэт роботууд үйлдвэрлэлийн байгууламжид хүмүүстэй зэрэгцэн ажиллаж эхэлжээ.</p>
+                <div class="news-card-time">11 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Ногоон технологи">
+                <div class="news-card-category">Ногоон технологи</div>
+                <h3>Нарны зайны үр ашиг 50%-ийн дээд амжилтад хүрэв</h3>
+                <p>Фотоэлектрик технологийн дэвшил хямд сэргээгдэх эрчим хүчийг амлаж байна.</p>
+                <div class="news-card-time">13 цагийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Програмчлал">
+                <div class="news-card-category">Програмчлал</div>
+                <h3>Шинэ програмчлалын хэл хиймэл оюун ухааны хөгжүүлэлтийг хялбарчилна</h3>
+                <p>Шинэлэг синтакс машин сургалтыг илүү олон хөгжүүлэгчдэд хүртээмжтэй болгож байна.</p>
+                <div class="news-card-time">15 цагийн өмнө</div>
+            </div>
+        </div>
+
+        <div class="section-header" id="video-news">
+            <h2>Видео мэдээ</h2>
+        </div>
+
+        <div class="video-section">
+            <div class="video-grid">
+                <div class="main-video">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <div class="video-overlay">
+                        <span class="video-category">Яаралтай мэдээ</span>
+                        <h3 class="video-title">Дэлхийн эдийн засгийн чуулган уур амьсгалын өөрчлөлтийг хэлэлцэв</h3>
+                        <div class="video-meta">2.1 сая үзэлт • 3 цагийн өмнө</div>
+                    </div>
+                </div>
+                
+                <div class="video-sidebar">
+                    <div class="video-item">
+                        <div class="video-thumb">
+                            <img src="#" alt="Технологийн мэдээ">
+                            <i class='bx bx-play play-icon'></i>
+                        </div>
+                        <div class="video-info">
+                            <h4>Технологийн аварга компаниуд хиймэл оюун ухааны түншлэлийг зарлав</h4>
+                            <div class="video-duration">5:42</div>
+                        </div>
+                    </div>
+
+                    <div class="video-item">
+                        <div class="video-thumb">
+                            <img src="#" alt="Зах зээлийн мэдээ">
+                            <i class='bx bx-play play-icon'></i>
+                        </div>
+                        <div class="video-info">
+                            <h4>Зах зээлүүд Холбооны нөөцийн шийдвэрт хариу үзүүлэв</h4>
+                            <div class="video-duration">3:28</div>
+                        </div>
+                    </div>
+
+                    <div class="video-item">
+                        <div class="video-thumb">
+                            <img src="#" alt="Сансрын мэдээ">
+                            <i class='bx bx-play play-icon'></i>
+                        </div>
+                        <div class="video-info">
+                            <h4>SpaceX шинэ хиймэл дагуулыг амжилттай хөөргөв</h4>
+                            <div class="video-duration">7:15</div>
+                        </div>
+                    </div>
+
+                    <div class="video-item">
+                        <div class="video-thumb">
+                            <img src="#" alt="Спорт">
+                            <i class='bx bx-play play-icon'></i>
+                        </div>
+                        <div class="video-info">
+                            <h4>Дэлхийн аварга шалгаруулах тэмцээний бэлтгэл ажил эхэлж байна</h4>
+                            <div class="video-duration">4:33</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header" id="games">
+            <h2>Тоглоом ба зугаа цэнгэл</h2>
+        </div>
+
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-icon">
+                    <i class='bx bx-joystick'></i>
+                </div>
+                <h3>Мэдээний асуулт хариулт</h3>
+                <p>Өдөр тутмын мэдээний асуулт хариултаар өнөөгийн үйл явдлын талаарх мэдлэгээ шалгаарай. Дэлхий даяарх асуултуудаар өөрийгөө сорьцгооно уу.</p>
+                <button class="play-button" onclick="playGame('quiz')">Одоо тоглох</button>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon">
+                    <i class='bx bx-puzzle-piece'></i>
+                </div>
+                <h3>Үгийн тоглоом</h3>
+                <p>Өнөөгийн гарчиг болон тренд сэдвүүдээр үг таах тоглоом тоглоно уу. Мэдээлэлтэй байхын зэрэгцээ үгийн сангаа баяжуулаарай.</p>
+                <button class="play-button" onclick="loadPage('wordle.html')">Одоо тоглох</button>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>Бизнес ба санхүү</h2>
+        </div>
+
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="#" alt="Санхүү">
+                <div class="news-card-category">Санхүү</div>
+                <h3>Технологийн аварга компаниуд улирлын дээд амжилттай орлого мэдээлэв</h3>
+                <p>Томоохон технологийн компаниуд хүчтэй санхүүгийн үр дүнгээр шинжээчдийн хүлээлтийг давав.</p>
+                <div class="news-card-time">1 өдрийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Стартап">
+                <div class="news-card-category">Стартап</div>
+                <h3>Венчур капиталын санхүүжилт технологийн салбарт өсөв</h3>
+                <p>Хөрөнгө оруулалтын пүүсүүд дэлхий даяар шинэлэг технологийн стартапуудад тэрбумаар доллар хөрөнгө оруулж байна.</p>
+                <div class="news-card-time">1 өдрийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Худалдаа">
+                <div class="news-card-category">Худалдаа</div>
+                <h3>Дэлхийн худалдааны гэрээ эдийн засгийн орчинг өөрчилж байна</h3>
+                <p>Шинэ олон улсын түншлэл худалдаа, эдийн засгийн хамтын ажиллагааг дэмжихийг зорьж байна.</p>
+                <div class="news-card-time">1 өдрийн өмнө</div>
+            </div>
+
+            <div class="news-card">
+                <img src="#" alt="Эрчим хүч">
+                <div class="news-card-category">Эрчим хүч</div>
+                <h3>Газрын тосны үнэ зах зээлийн тогтворгүй байдлын дараа тогтворжив</h3>
+                <p>Эрчим хүчний зах зээлүүд дэлхий даяар нийлүүлэлт, эрэлтийн динамик өөрчлөгдөж байгаа үед тэнцвэрт байдлаа олж байна.</p>
+                <div class="news-card-time">1 өдрийн өмнө</div>
+            </div>
+        </div>
+    
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h5>Хэсгүүд</h5>
+                <a href="#">Дэлхийн мэдээ</a>
+                <a href="#">Улс төр</a>
+                <a href="#">Бизнес</a>
+                <a href="#">Технологи</a>
+                <a href="#">Спорт</a>
+                <a href="#">Зугаа цэнгэл</a>
+            </div>
+            <div>
+                <h5>Нөөц</h5>
+                <a href="#">Мобайл апп</a>
+                <a href="#">Мэдээллийн товхимол</a>
+                <a href="#">RSS тэжээл</a>
+                <a href="#">Хэвлэлийн төв</a>
+                <a href="#">Ажлын байр</a>
+            </div>
+            <div>
+                <h5>Хууль эрх зүй</h5>
+                <a href="#">Ашиглалтын нөхцөл</a>
+                <a href="#">Нууцлалын бодлого</a>
+                <a href="#">Күүкийн бодлого</a>
+                <a href="#">Хүртээмж</a>
+                <a href="#">Зохиогчийн эрх</a>
+            </div>
+            <div class="footer-about">
+                <h5>BBCNN-ийн тухай</h5>
+                <p>BBCNN дэлхий даяарх яаралтай мэдээ болон гүнзгий шинжилгээ хүргэдэг. Сэтгүүлзүйн шилдэг чанарт тууштай байх нь таныг хамгийн чухал түүхүүдийн талаар мэдээлэлтэй байлгадаг.</p>
+                <div class="social-links">
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-linkedin'></i>
+                    <i class='bx bxl-youtube'></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 BBCNN Мэдээ. Бүх эрх хуулиар хамгаалагдсан. Туршилтын мэдээний вэбсайт - контент янз бүрийн эх сурвалжаас цуглуулсан.</p>
+        </div>
+    </footer>
+
+    <script src="homepage.js"></script>
+</body>
+</html>
